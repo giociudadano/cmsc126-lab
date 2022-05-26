@@ -21,10 +21,12 @@ playerImage.src = '../assets/Alex_run_32x32.png';
 class Boundary {
 	constructor({position}) {
 		this.position = position;
+		this.width = 32;
+		this.height = 32;
 	}
 
 	draw() {
-		graphics.fillStyle = 'red';
+		graphics.fillStyle = 'rgba(255, 255, 255, 0.2)';
 		graphics.fillRect(this.position.x, this.position.y, 32, 32);
 	}
 }
@@ -45,6 +47,10 @@ class Sprite {
 		this.position = position;
 		this.image = image;
 		this.frames = frames;
+		this.image.onload = () => {
+			this.width = this.image.width / this.frames.max
+			this.height = this.image.height
+		}
 	}
 
 	draw(){
@@ -84,26 +90,82 @@ const player = new Sprite({
 	}
 })
 
-const test = new Boundary({position:{x: 0, y:0}});
+const moveObjects = [background, ...boundaries];
 
-const moveObjects = [background, test];
+function isColliding(a, b){
+	if (a.position.x + a.width - 1 > b.position.x){
+		if (a.position.x + 1 < b.position.x + b.width){
+			if (a.position.y + 48 < b.position.y + b.height){
+				if (a.position.y + a.height > b.position.y){
+					return true;
+				}
+			}
+		}
+	}
+	return false;
+}
 
 function animate(){
 	window.requestAnimationFrame(animate);
 	background.draw();
-	test.draw();
+	boundaries.forEach((boundary) => {
+		boundary.draw();	
+	})
 	player.draw();
-	//boundaries.forEach(boundary => {
-	//	boundary.draw();
-	//})
-	if (keys.w.pressed && lastKey === 'w'){
-		moveObjects.forEach(object => {object.position.y += 3})
-	} else if (keys.a.pressed && lastKey === 'a'){
-		moveObjects.forEach(object => {object.position.x += 3})
-	} else if (keys.d.pressed && lastKey === 'd'){
-		moveObjects.forEach(object => {object.position.x -= 3})
-	} else if (keys.s.pressed && lastKey === 's'){
-		moveObjects.forEach(object => {object.position.y -= 3})
+
+	let isMoving = true;
+	if (keys.w.pressed){
+		if (lastKey === 'w'){
+			for (let i = 0; i < boundaries.length; i++){
+				const boundary = boundaries[i];
+				if (isColliding(player, {...boundary, position: {x: boundary.position.x, y: boundary.position.y + 3}})){
+					isMoving = false;
+					break;
+				}
+			}
+			if (isMoving){
+				moveObjects.forEach(object => {object.position.y += 3})
+			}
+		}
+	} else if (keys.a.pressed){
+		if (lastKey === 'a'){
+			for (let i = 0; i < boundaries.length; i++){
+				const boundary = boundaries[i];
+				if (isColliding(player, {...boundary, position: {x: boundary.position.x + 3, y: boundary.position.y}})){
+					isMoving = false;
+					break;
+				}
+			}
+			if (isMoving){
+				moveObjects.forEach(object => {object.position.x += 3})
+			}
+		}
+	} else if (keys.s.pressed){
+		if (lastKey === 's'){
+			for (let i = 0; i < boundaries.length; i++){
+				const boundary = boundaries[i];
+				if (isColliding(player, {...boundary, position: {x: boundary.position.x, y: boundary.position.y - 3}})){
+					isMoving = false;
+					break;
+				}
+			}
+			if (isMoving){
+				moveObjects.forEach(object => {object.position.y -= 3})
+			}
+		}
+	} else if (keys.d.pressed){
+		if (lastKey === 'd'){
+			for (let i = 0; i < boundaries.length; i++){
+				const boundary = boundaries[i];
+				if (isColliding(player, {...boundary, position: {x: boundary.position.x - 3, y: boundary.position.y}})){
+					isMoving = false;
+					break;
+				}
+			}
+			if (isMoving){
+				moveObjects.forEach(object => {object.position.x -= 3})
+			}
+		}	
 	}
 
 }
