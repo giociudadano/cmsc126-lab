@@ -1,4 +1,12 @@
 { "compressionlevel":-1,
+ "editorsettings":
+    {
+     "export":
+        {
+         "format":"json",
+         "target":"bounds.json"
+        }
+    },
  "height":30,
  "infinite":false,
  "layers":[
@@ -743,6 +751,7 @@
                  "x":0,
                  "y":0
                 }],
+         "locked":true,
          "name":"Objects",
          "opacity":1,
          "type":"group",
@@ -786,7 +795,7 @@
          "name":"Map Boundaries",
          "opacity":0.64,
          "type":"tilelayer",
-         "visible":true,
+         "visible":false,
          "width":52,
          "x":0,
          "y":0
@@ -827,7 +836,7 @@
          "name":"Battle Zones",
          "opacity":0.5,
          "type":"tilelayer",
-         "visible":false,
+         "visible":true,
          "width":52,
          "x":0,
          "y":0

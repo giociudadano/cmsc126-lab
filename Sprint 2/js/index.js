@@ -3,8 +3,8 @@ canvas.width = 1024;
 canvas.height = 576;
 
 const mapBounds = []
-for (let i = 0; i < bounds.length; i += 44){
-	mapBounds.push(bounds.slice(i, 44 + i));
+for (let i = 0; i < bounds.length; i += 52){
+	mapBounds.push(bounds.slice(i, 52 + i));
 }
 
 const screenOffset = {x: -896, y: -304};
