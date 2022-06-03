@@ -7,7 +7,12 @@ for (let i = 0; i < bounds.length; i += 52){
 	mapBounds.push(bounds.slice(i, 52 + i));
 }
 
-const screenOffset = {x: -896, y: -304};
+const mapZones = []
+for (let i = 0; i < zones.length; i += 52){
+	mapZones.push(zones.slice(i, 52 + i));
+}
+
+const screenOffset = {x: -1088, y: -464};
 
 const graphics = canvas.getContext('2d');
 graphics.scale(2, 2);
@@ -36,7 +41,18 @@ mapBounds.forEach((row, i) => {
 				));
 		}
 	})
-})
+});
+
+const battlezones = []
+mapZones.forEach((row, i) => {
+	row.forEach((tile, j) => {
+		if (tile === 423){
+			battlezones.push(new Boundary(
+				{position: {x: j * 32 + screenOffset.x, y: i * 32 + screenOffset.y}}
+				));
+		}
+	})
+});
 
 const background = new Sprite({
 	position: {x: screenOffset.x, y: screenOffset.y},
@@ -72,7 +88,8 @@ const player = new Sprite({
 	}
 })
 
-const moveObjects = [background, ...boundaries, foreground];
+const moveObjects = [background, ...boundaries, foreground, ...battlezones];
+let isBattling = false;
 
 function isColliding(a, b){
 	if (a.position.x + a.width - 1 > b.position.x){
@@ -87,6 +104,14 @@ function isColliding(a, b){
 	return false;
 }
 
+function isOverlapping(a, b){
+	const overlappingArea = 
+		(Math.min(a.position.x + a.width, b.position.x + b.width) - Math.max(a.position.x, b.position.x)) *
+		(Math.min(a.position.y + a.height + 16, b.position.y + b.height) - Math.max(a.position.y, b.position.y));
+	return overlappingArea > ((a.width * a.height) * 0.40);
+
+}
+
 function animate(){
 	window.requestAnimationFrame(animate);
 	background.draw();
@@ -94,6 +119,24 @@ function animate(){
 	foreground.draw();
 	let isMoving = true;
 	player.isMoving = false;
+
+	if (isBattling) {
+		return;
+	}
+
+	if (keys.w.pressed || keys.a.pressed || keys.s.pressed || keys.d.pressed){
+		for (let i = 0; i < battlezones.length; i++){
+			const battlezone = battlezones[i];
+			if (isColliding(player, battlezone)){
+				if(isOverlapping(player, battlezone)){
+					if (Math.random() < 0.01){
+						isBattling = true;
+					}
+				}
+			}
+		}
+	}
+
 	if (keys.w.pressed){
 		if (lastKey === 'w'){
 			player.image = player.sprites.up;
