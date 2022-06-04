@@ -1,0 +1,120 @@
+/* Theme Colors */
+
+:root {
+	--light-1: white;
+	--light-2: rgb(248, 248, 248);
+	--light-3: rgb(230, 230, 230);
+	--light-4: rgb(200, 200, 200);
+
+	--dark-1: rgb(40, 40, 40);
+	--dark-2: rgb(80, 80, 80);
+	
+	--accent-purple: rgb(135, 36, 150);
+}
+
+/* Font Collections */
+
+@font-face {
+	font-family: Montserrat-Regular;
+  	src: url(fonts/Montserrat-Regular.ttf);
+}
+
+@font-face {
+	font-family: Montserrat-SemiBold;
+  	src: url(fonts/Montserrat-SemiBold.ttf);
+}
+
+
+@font-face {
+	font-family: Montserrat-Black;
+  	src: url(fonts/Montserrat-Black.ttf);
+}
+
+body {
+	background-color: var(--light-2);
+	margin: 0;
+}
+
+
+/* Navigation Bar */
+
+ul.navigation-bar {
+	position: fixed;
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--light-1);
+	z-index: 0;
+}
+
+li.navigation-logo img {
+	height: 40px;
+	padding: 4px 10px 0px 0px;
+	float: left;
+	display: block;
+}
+
+li.navigation-title a {
+	display: block;
+	float: left;
+	color: black;
+	padding: 12px 5% 0px 0px;
+	text-decoration: none;
+	font: 20px Montserrat-Black;
+}
+
+li.navigation-tab {
+	float: left;
+	font: 14px Montserrat-Regular;
+}
+
+li.navigation-tab a {
+	display: block;
+	color: var(--dark-1);
+	text-align: center;
+	padding: 16px 30px 14px 30px;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+}
+
+li.navigation-tab a:hover {
+	background-color: var(--light-3);
+	border-bottom: 3px solid var(--light-3);
+}
+
+li.navigation-tab a.selected {
+	border-bottom: 3px solid var(--dark-2);
+}
+
+li.navigation-profile b {
+	float: right;
+	font: 16px Montserrat-SemiBold;
+}
+
+li.navigation-profile :not(b) {
+	float: right;
+	font: 12px Montserrat-Regular;
+}
+
+li.navigation-profile a {
+	display: block;
+	color: var(--dark-1);
+	text-align: left;
+	padding: 10px 10px 0px 0px;
+	text-decoration: none;
+}
+
+li.navigation-profile img {
+	float: right;
+	height: 32px;
+	border-radius: 50%;
+	border-color: black;
+}
+
+/* Generic */
+
+div.page-margin {
+	margin: 0% 8%;
+}
