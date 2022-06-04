@@ -1,7 +1,7 @@
 /* Video Banner */
 
 div.video-banner {
-    background-color: black; /* TEMPORARY */
+    background-color: black;
 	position: relative; 
     padding-bottom: 56.25%; 
     height: 0; 
@@ -78,8 +78,9 @@ div.video-text div.buttons div.signup a {
 /* Index Content */
 
 div.content {
-    top: 70%;
-    position: absolute;
+    float: left;
+    top: -33%;
+    position: relative;
     background-color: var(--light-2);
     width: 100%;
     z-index: 3;
@@ -159,5 +160,75 @@ div.content div.news div.website-updates b {
 div.content div.featured-games {
     float: left;
     width: 65%;
+    position: relative;
+}
+
+div.content div.featured-games div.games-cell {
+    float: left;
+    width: 300px;
+    position: relative;
+    padding: 0px 20px 20px 0px;
+}
+
+div.content div.featured-games div.games-cell img:hover {
+    opacity: 90%;
+}
+
+div.content div.featured-games div.games-cell div.game-info {
+    position: relative;
+    background-color: white;
+    padding: 0px 20px 0px 20px;
+    height: 60px;
+    vertical-align: center;
+    border: 1px solid var(--light-4);
+}
+
+div.content div.featured-games div.games-cell div.game-info div.name {
+    float: left;
+}
+
+div.content div.featured-games div.games-cell div.game-info div.rating {
+    float: right;
+}
+
+div.content div.featured-games div.games-cell div.game-info h3 {
+    color: var(--dark-2);
+    font: 18px NotoSans-SemiBold;
+    top: -5px;
+    position: relative;
+}
+
+div.content div.featured-games div.games-cell div.game-info h5 {
+    position: relative;
+    top: -26px;
+    font: 10px NotoSans-SemiBold;
+    text-transform: uppercase;
+}
+
+div.content div.featured-games div.games-cell div.game-info h5.download {
+    color: var(--accent-pink); 
+}
+
+div.content div.featured-games div.games-cell div.game-info h5.play {
+    color: var(--accent-purple);
+}
+
+div.content div.featured-games div.games-cell div.game-info h5.wip {
+    color: var(--accent-red);
+}
+
+div.content div.featured-games div.games-cell div.game-info h2 {
+    text-align: right;
+    color: var(--dark-1);
+    font: 26px NotoSans-Bold;
+    position: relative;
+    padding-top: 5px;
+    margin: 0;
+}
+
+div.content div.featured-games div.games-cell div.game-info img {
+    width: 80px;
+    padding: 0;
+    margin-top: -6px;
     position: relative;
 }

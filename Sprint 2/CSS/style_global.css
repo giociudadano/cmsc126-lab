@@ -12,6 +12,7 @@
 	
 	--accent-purple: rgb(135, 36, 150);
 	--accent-pink: rgb(238, 45, 134);
+	--accent-red: rgb(238, 45, 45);
 }
 
 /* Font Collections */
@@ -124,8 +125,24 @@ li.navigation-profile img {
 	border: 2px solid var(--light-3)
 }
 
+/* Footer */
+
+div.footer {
+	position: relative;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+  	bottom: 0;
+}
+
 /* Generic */
 
 div.page-margin {
 	margin: 0% 8%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
 }
