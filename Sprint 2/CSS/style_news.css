@@ -105,3 +105,11 @@ div.content h1 {
     color: var(--dark-2);
     font: 15px NotoSans-Bold;
 }
+
+.tabcontent i {
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 50%;
+    color: var(--dark-3);
+    font: 12px NotoSans-Bold;
+}
