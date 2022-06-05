@@ -1,0 +1,115 @@
+div.content {
+    float: left;
+    position: relative;
+    top: 0%;
+    z-index: 3;
+    width: 100%;
+    padding: 3% 0 9% 0;
+}
+
+div.content h1 {
+    font: 64px NotoSans-Black;
+    color: var(--dark-1);
+}
+
+.tab {
+    overflow: hidden;
+    background-color: var(--light-4);
+}
+
+.tab button {
+    background-color: var(--light-3);
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    font: 14px NotoSans-SemiBold;
+    color: var(--dark-2);
+}
+
+.tab button:hover {
+    background-color: var(--light-2b);
+}
+
+.tab button.active {
+    background-color: var(--light-2b);
+    border-bottom: 3px solid var(--accent-purple);
+}
+
+.tabcontent {
+    display: none;
+    padding: 40px 20px;
+    border-top: none;
+}
+
+.tabcontent div.newsblock {
+    float: left;
+    width: 100%;
+    padding-bottom: 2%;
+}
+
+.tabcontent div.newsblock div.image {
+    width: 25%;
+    float: left;
+    position: relative;
+    padding-right: 5%;
+    vertical-align: center;
+}
+
+.tabcontent div.newsblock div.image img {
+    width: 100%;
+    position: relative;
+
+    display: block;
+}
+
+.tabcontent div.newsblock div.content {
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+    width: 40%;
+    float: left;
+    position: relative;
+    vertical-align: top;
+    top: -30px;
+}
+
+.tabcontent div.newsblock div.content h2 {
+    font: 32px NotoSans-SemiBold;
+    color: var(--dark-2);
+    
+}
+
+.tabcontent div.newsblock div.content h4 {
+    font: 12px NotoSans-SemiBold;
+    color: var(--dark-2);
+    position: relative;
+    top: -24px;
+}
+
+.tabcontent div.newsblock div.content p {
+    font: 14px NotoSans-Regular;
+    color: var(--dark-3);
+    text-align: justify;
+    position: relative;
+    top: -12px;
+}
+
+.tabcontent div.newsblock div.content div.readmore {
+    position: relative;
+    padding: 10px 30px;
+    background-color: var(--light-3);
+    float: left;
+    border-radius: 3%;
+    color: var(--dark-2);
+    font: 15px NotoSans-Bold;
+}
+
+.tabcontent i {
+    text-transform: uppercase;
+    text-align: center;
+    padding-left: 50%;
+    color: var(--dark-3);
+    font: 12px NotoSans-Bold;
+}

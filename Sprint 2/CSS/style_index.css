@@ -1,0 +1,235 @@
+/* Video Banner */
+
+div.video-banner {
+    background-color: black;
+	position: relative; 
+    padding-bottom: 56.25%; 
+    height: 0; 
+    overflow: hidden; 
+    z-index: 1;
+}
+
+div.video-banner iframe {
+	position: absolute;
+	top: -40; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    filter: brightness(30%);
+    pointer-events: none
+}
+
+/* Video Banner Text and Buttons */
+
+div.video-text {
+	position: absolute;
+    top: 20%;
+    left: 8%;
+    z-index: 2;
+}
+
+div.video-text div.title {
+    font: 72px NotoSans-Black;
+    color: var(--light-2);
+}
+
+div.video-text div.subtitle {
+	top: -10px;
+	position: relative;
+	font: 18px NotoSans-Bold;
+	color: var(--light-4);
+}
+
+div.video-text div.buttons {
+    top: 70px;
+    position: relative;
+    
+}
+
+div.video-text div.buttons div.login {
+    padding: 10px 30px;
+    background-image: linear-gradient(to bottom right, var(--accent-purple), var(--accent-pink));
+    float: left;
+    border-radius: 3%;
+    margin-right: 20px; 
+}
+
+div.video-text div.buttons div.signup {
+    padding: 10px 30px;
+    background-color: var(--light-3);
+    float: left;
+    border-radius: 3%;
+    margin-right: 20px; 
+}
+
+div.video-text div.buttons div.login a {
+    text-decoration: none;
+    color: var(--light-3);
+    font: 15px NotoSans-Bold;
+}
+
+div.video-text div.buttons div.signup a {
+    text-decoration: none;
+    font: 15px NotoSans-Bold;
+    color: var(--dark-1);
+    
+}
+
+/* Index Content */
+
+div.content {
+    float: left;
+    top: -33%;
+    margin-bottom: -10%;
+    position: relative;
+    background-color: var(--light-2);
+    width: 100%;
+    z-index: 3;
+    padding: 3% 0 3% 0;
+}
+
+div.content h1 {
+    font: 40px NotoSans-ExtraBold;
+    color: var(--dark-1);
+}
+
+div.content div.news {
+    float: left;
+    width: 30%;
+    position: relative;
+    margin-right: 5%;
+}
+
+div.content div.news div.social-media-icons div.icon img {
+    float: left;
+    height: 32px; 
+    margin-right: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+div.content div.news div.game-updates {
+    margin-top: 50px;
+}
+
+div.content div.news div.game-updates h4 {
+    text-transform: uppercase;
+    font: 14px NotoSans-Bold;
+    color: var(--accent-purple);
+    margin: 0;
+    padding-bottom: 5;
+}
+
+div.content div.news div.game-updates h3 {
+    font: 18px NotoSans-SemiBold;
+    color: var(--dark-2);
+    line-height: 100%;
+    margin: 0;
+    padding-bottom: 20;
+}
+
+div.content div.news div.game-updates b {
+    position: relative;
+    top: -18px;
+    font: 11px NotoSans-SemiBold;
+    color: var(--dark-3);
+}
+
+div.content div.news div.website-updates h4 {
+    text-transform: uppercase;
+    font: 14px NotoSans-Bold;
+    color: var(--accent-pink);
+    margin: 0;
+    padding-bottom: 5;
+}
+
+div.content div.news div.website-updates h3 {
+    font: 18px NotoSans-SemiBold;
+    color: var(--dark-2);
+    line-height: 100%;
+    margin: 0;
+    padding-bottom: 20;
+}
+
+div.content div.news div.website-updates b {
+    position: relative;
+    top: -18px;
+    font: 11px NotoSans-SemiBold;
+    color: var(--dark-3);
+}
+
+div.content div.featured-games {
+    float: left;
+    width: 65%;
+    position: relative;
+}
+
+div.content div.featured-games div.games-cell {
+    float: left;
+    width: 300px;
+    position: relative;
+    padding: 0px 20px 20px 0px;
+}
+
+div.content div.featured-games div.games-cell img:hover {
+    opacity: 90%;
+}
+
+div.content div.featured-games div.games-cell div.game-info {
+    position: relative;
+    background-color: white;
+    padding: 0px 20px 0px 20px;
+    height: 60px;
+    vertical-align: center;
+    border: 1px solid var(--light-4);
+}
+
+div.content div.featured-games div.games-cell div.game-info div.name {
+    float: left;
+}
+
+div.content div.featured-games div.games-cell div.game-info div.rating {
+    float: right;
+}
+
+div.content div.featured-games div.games-cell div.game-info h3 {
+    color: var(--dark-2);
+    font: 18px NotoSans-SemiBold;
+    top: -5px;
+    position: relative;
+}
+
+div.content div.featured-games div.games-cell div.game-info h5 {
+    position: relative;
+    top: -26px;
+    font: 10px NotoSans-SemiBold;
+    text-transform: uppercase;
+}
+
+div.content div.featured-games div.games-cell div.game-info h5.download {
+    color: var(--accent-pink); 
+}
+
+div.content div.featured-games div.games-cell div.game-info h5.play {
+    color: var(--accent-purple);
+}
+
+div.content div.featured-games div.games-cell div.game-info h5.wip {
+    color: var(--accent-red);
+}
+
+div.content div.featured-games div.games-cell div.game-info h2 {
+    text-align: right;
+    color: var(--dark-1);
+    font: 26px NotoSans-Bold;
+    position: relative;
+    padding-top: 5px;
+    margin: 0;
+}
+
+div.content div.featured-games div.games-cell div.game-info img {
+    width: 80px;
+    padding: 0;
+    margin-top: -6px;
+    position: relative;
+}

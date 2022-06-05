@@ -1,0 +1,197 @@
+/* Theme Colors */
+
+:root {
+	--light-1: white;
+	--light-2: rgb(248, 248, 248);
+	--light-2b: rgb(239, 239, 239);
+	--light-3: rgb(230, 230, 230);
+	--light-4: rgb(200, 200, 200);
+
+	--dark-1: rgb(40, 40, 40);
+	--dark-2: rgb(80, 80, 80);
+	--dark-3: rgb(122, 122, 122);
+	
+	--accent-purple: rgb(135, 36, 150);
+	--accent-pink: rgb(238, 45, 134);
+	--accent-red: rgb(238, 45, 45);
+}
+
+/* Font Collections */
+
+@font-face {
+	font-family: NotoSans-Regular;
+  	src: url(fonts/NotoSans-Regular.ttf);
+}
+
+@font-face {
+	font-family: NotoSans-SemiBold;
+  	src: url(fonts/NotoSans-SemiBold.ttf);
+}
+
+@font-face {
+	font-family: NotoSans-Bold;
+  	src: url(fonts/NotoSans-Bold.ttf);
+}
+
+@font-face {
+	font-family: NotoSans-ExtraBold;
+  	src: url(fonts/NotoSans-ExtraBold.ttf);
+}
+
+@font-face {
+	font-family: NotoSans-Black;
+  	src: url(fonts/NotoSans-Black.ttf);
+}
+
+body {
+	background-color: var(--light-2);
+	margin: 0;
+}
+
+
+/* Navigation Bar */
+
+ul.navigation-bar {
+	position: fixed;
+	width: 100%;
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: var(--light-1);
+	z-index: 1000;
+}
+
+li.navigation-logo img {
+	height: 40px;
+	padding: 4px 10px 0px 0px;
+	float: left;
+	display: block;
+}
+
+li.navigation-title a {
+	display: block;
+	float: left;
+	color: black;
+	padding: 12px 5% 0px 0px;
+	text-decoration: none;
+	font: 20px NotoSans-Black;
+}
+
+li.navigation-tab {
+	float: left;
+	font: 14px NotoSans-SemiBold;
+}
+
+li.navigation-tab a {
+	display: block;
+	color: var(--dark-1);
+	text-align: center;
+	padding: 16px 30px 14px 30px;
+	text-decoration: none;
+	border-bottom: 3px solid transparent;
+}
+
+li.navigation-tab a:hover {
+	background-color: var(--light-3);
+	border-bottom: 3px solid var(--light-3);
+}
+
+li.navigation-tab a.selected {
+	border-bottom: 3px solid var(--dark-2);
+}
+
+li.navigation-profile b {
+	float: right;
+	font: 16px NotoSans-SemiBold;
+}
+
+li.navigation-profile :not(b) {
+	float: right;
+	font: 12px NotoSans-Regular;
+}
+
+li.navigation-profile a {
+	display: block;
+	color: var(--dark-1);
+	text-align: left;
+	padding: 6px 10px 0px 0px;
+	text-decoration: none;
+}
+
+li.navigation-profile img {
+	float: right;
+	display: block;
+	height: 36px;
+	border-radius: 50%;
+	border: 2px solid var(--light-3)
+}
+
+/* Footer */
+
+div.footer {
+	padding: 3% 0;
+	float: left;
+	position: relative;
+    background-color: black;
+    width: 100%;
+    z-index: 1;
+    left: 0;
+  	bottom: 0;
+}
+
+div.footer div.logo {
+	width: 40%;
+	padding-right: 20%;
+}
+
+div.footer div.logo h1 {
+	float: left;
+	position: relative;
+	font: 20px NotoSans-Black;
+	color: var(--light-2);
+	top: -6px;
+}
+
+div.footer div.logo img {
+	float: left;
+	height: 40px;
+	margin-right: 10px;
+}
+
+div.footer div.logo p {
+	float: left;
+	font: 13px NotoSans-Regular;
+	color: var(--light-4);
+	text-align: justify;
+}
+
+div.footer div.categories {
+	width: 15%;
+	padding-left: 10%;
+	float: left;
+	align: top;
+}
+
+div.footer h3 {
+	font: 14px NotoSans-Bold;
+	color: var(--light-2);
+	text-transform: uppercase;
+}
+
+div.footer div.categories p {
+	font: 14px NotoSans-Regular;
+	color: var(--accent-pink);
+	line-height: 120%;
+}
+
+/* Generic */
+
+div.page-margin {
+	margin: 0% 8%;
+}
+
+a {
+	text-decoration: none;
+	color: inherit;
+}

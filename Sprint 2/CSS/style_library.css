@@ -1,0 +1,110 @@
+div.content {
+    float: left;
+    position: relative;
+    top: 0%;
+    z-index: 3;
+    width: 100%;
+    padding: 3% 0 9% 0;
+
+}
+
+div.content h1 {
+    font: 64px NotoSans-Black;
+    color: var(--dark-1);
+}
+
+div.login {
+    padding: 10px 30px;
+    background-image: linear-gradient(to bottom right, var(--accent-purple), var(--accent-pink));
+    float: left;
+    border-radius: 3%;
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--light-3);
+    font: 15px NotoSans-Bold;
+    top: -35px; 
+    position: relative;
+}
+
+div.signup {
+    padding: 10px 30px;
+    background-color: var(--light-3);
+    float: left;
+    border-radius: 3%;
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--dark-2);
+    font: 15px NotoSans-Bold;
+    top: -35px; 
+    position: relative;
+}
+
+div.games-cell {
+    float: left;
+    width: 300px;
+    position: relative;
+    padding: 0px 20px 20px 0px;
+}
+
+div.games-cell img:hover {
+    opacity: 90%;
+}
+
+div.game-info {
+    position: relative;
+    background-color: white;
+    padding: 0px 20px 0px 20px;
+    height: 60px;
+    vertical-align: center;
+    border: 1px solid var(--light-4);
+}
+
+div.game-info div.name {
+    float: left;
+}
+
+div.game-info div.rating {
+    float: right;
+}
+
+div.game-info h3 {
+    color: var(--dark-2);
+    font: 18px NotoSans-SemiBold;
+    top: -5px;
+    position: relative;
+}
+
+div.game-info h5 {
+    position: relative;
+    top: -26px;
+    font: 10px NotoSans-SemiBold;
+    text-transform: uppercase;
+}
+
+div.game-info h5.download {
+    color: var(--accent-pink); 
+}
+
+div.game-info h5.play {
+    color: var(--accent-purple);
+}
+
+div.game-info h5.wip {
+    color: var(--accent-red);
+}
+
+div.game-info h2 {
+    text-align: right;
+    color: var(--dark-1);
+    font: 26px NotoSans-Bold;
+    position: relative;
+    padding-top: 5px;
+    margin: 0;
+}
+
+div.game-info img {
+    width: 80px;
+    padding: 0;
+    margin-top: -6px;
+    position: relative;
+}

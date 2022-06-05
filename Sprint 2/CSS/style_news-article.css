@@ -1,0 +1,33 @@
+div.content {
+	width: 100%;
+	top: 10%;
+	position: relative;
+	float: left;
+	padding: 3% 0 9% 0;
+}
+
+div.back-button {
+    padding: 10px 30px;
+    background-color: var(--light-3);
+    border-radius: 3%;
+    float: left;
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--dark-2);
+    font: 15px NotoSans-Bold;
+    top: -25px; 
+    position: relative;
+}
+
+div.content-news {
+	width: 60%;
+	margin-right: 10%;
+	background-color: red;
+	float: left;
+}
+
+div.content-rec {
+	width: 30%;
+	background-color: green;
+	float: left;
+}
