@@ -80,6 +80,7 @@ div.video-text div.buttons div.signup a {
 div.content {
     float: left;
     top: -33%;
+    margin-bottom: -10%;
     position: relative;
     background-color: var(--light-2);
     width: 100%;

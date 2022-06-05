@@ -3,6 +3,7 @@
 :root {
 	--light-1: white;
 	--light-2: rgb(248, 248, 248);
+	--light-2b: rgb(239, 239, 239);
 	--light-3: rgb(230, 230, 230);
 	--light-4: rgb(200, 200, 200);
 
@@ -120,6 +121,7 @@ li.navigation-profile a {
 
 li.navigation-profile img {
 	float: right;
+	display: block;
 	height: 36px;
 	border-radius: 50%;
 	border: 2px solid var(--light-3)
@@ -128,12 +130,59 @@ li.navigation-profile img {
 /* Footer */
 
 div.footer {
+	padding: 3% 0;
+	float: left;
 	position: relative;
     background-color: black;
     width: 100%;
     z-index: 1;
     left: 0;
   	bottom: 0;
+}
+
+div.footer div.logo {
+	width: 40%;
+	padding-right: 20%;
+}
+
+div.footer div.logo h1 {
+	float: left;
+	position: relative;
+	font: 20px NotoSans-Black;
+	color: var(--light-2);
+	top: -6px;
+}
+
+div.footer div.logo img {
+	float: left;
+	height: 40px;
+	margin-right: 10px;
+}
+
+div.footer div.logo p {
+	float: left;
+	font: 13px NotoSans-Regular;
+	color: var(--light-4);
+	text-align: justify;
+}
+
+div.footer div.categories {
+	width: 15%;
+	padding-left: 10%;
+	float: left;
+	align: top;
+}
+
+div.footer h3 {
+	font: 14px NotoSans-Bold;
+	color: var(--light-2);
+	text-transform: uppercase;
+}
+
+div.footer div.categories p {
+	font: 14px NotoSans-Regular;
+	color: var(--accent-pink);
+	line-height: 120%;
 }
 
 /* Generic */
