@@ -1,0 +1,72 @@
+div.content {
+	width: 100%;
+	top: 10%;
+	position: relative;
+	float: left;
+	padding: 3% 0 9% 0;
+}
+
+div.back-button {
+    padding: 10px 30px;
+    background-color: var(--light-3);
+    border-radius: 3%;
+    float: left;
+    margin-right: 20px;
+    text-decoration: none;
+    color: var(--dark-2);
+    font: 15px NotoSans-Bold;
+    top: -25px; 
+    position: relative;
+}
+
+div.content-news {
+	width: 60%;
+	margin-right: 10%;
+	float: left;
+}
+
+div.content-news h1 {
+	color: var(--dark-1);
+    font: 40px NotoSans-ExtraBold;
+    clear: left;
+    margin: 0;
+    padding: 0;
+}
+
+div.content-news h4 {
+	color: var(--dark-3);
+    font: 13px NotoSans-Bold;
+    clear: left;
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
+
+div.content-news h5 {
+	color: var(--accent-purple);
+    font: 13px NotoSans-Bold;
+    clear: left;
+    text-transform: uppercase;
+    position: relative;
+    margin: 10px 0px;
+    padding: 0;
+}
+
+div.content-news img {
+	margin: 20px 0px;
+	width: 100%;
+}
+
+div.content-news p {
+	color: var(--dark-2);
+	font: 15px NotoSans-Regular;
+	text-align: justify;
+}
+
+div.content-image {
+	width: 100%;
+	height: 60%;
+	background-color: var(--light-3);
+	overflow: hidden;
+	margin-bottom: 50;
+}
