@@ -1,0 +1,11 @@
+body {
+	background-color: rgb(235, 235, 235);
+}
+
+#canvas-container {
+	text-align: center;
+}
+
+canvas {
+	display: inline;
+}

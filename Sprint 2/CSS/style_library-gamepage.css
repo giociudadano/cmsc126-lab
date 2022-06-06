@@ -1,0 +1,213 @@
+div.recommended {
+	width: 20%;
+	position: relative;
+	float: left;
+}
+
+div.recommended i {
+	color: var(--black-3);
+	text-transform: uppercase;
+	font: 12px NotoSans-Bold;
+	overflow: hidden;
+}
+
+div.recommended-box {
+	padding-top: 30px;
+	width: 100%;
+}
+
+div.recommended-box img {
+	width: 100%;
+	position: relative;
+}
+
+div.games-cell {
+    float: left;
+    width: 300px;
+    position: relative;
+    padding: 0px 20px 20px 0px;
+}
+
+div.games-cell img:hover {
+    opacity: 90%;
+}
+
+div.game-info {
+    position: relative;
+    background-color: white;
+    padding: 0px 20px 0px 20px;
+    height: 60px;
+    vertical-align: center;
+    border: 1px solid var(--light-4);
+    overflow: hidden;
+}
+
+div.game-info div.name {
+    float: left;
+}
+
+div.game-info div.rating {
+    float: right;
+}
+
+div.game-info h3 {
+    color: var(--dark-2);
+    font: 18px NotoSans-SemiBold;
+    top: -5px;
+    position: relative;
+}
+
+div.game-info h5 {
+    position: relative;
+    top: -26px;
+    font: 10px NotoSans-SemiBold;
+    text-transform: uppercase;
+}
+
+div.game-info h5.download {
+    color: var(--accent-pink); 
+}
+
+div.game-info h5.play {
+    color: var(--accent-purple);
+}
+
+div.game-info h5.wip {
+    color: var(--accent-red);
+}
+
+div.game-info h2 {
+    text-align: right;
+    color: var(--dark-1);
+    font: 26px NotoSans-Bold;
+    position: relative;
+    padding-top: 5px;
+    margin: 0;
+}
+
+div.game-info img {
+    width: 80px;
+    padding: 0;
+    margin-top: -6px;
+    position: relative;
+}
+
+div.content {
+    width: 100%;
+    top: 10%;
+    position: relative;
+    float: left;
+    padding: 3% 0 9% 0;
+}
+
+div.game-canvas {
+    width: 60%;
+    position: relative;
+    float: left;
+    margin-right: 20%;
+
+}
+
+div.game-canvas h1 {
+    font: 48px NotoSans-ExtraBold;
+    color: var(--dark-1);
+    margin: 0;
+    padding: 0;
+}
+
+div.game-canvas i {
+    font: 14px NotoSans-ExtraBold;
+    color: var(--accent-pink);
+    text-transform: uppercase;
+}
+
+div.game-canvas u {
+    font: 14px NotoSans-Regular;
+    color: var(--dark-3);
+    text-decoration-line: none;
+}
+
+div.game-canvas img {
+    margin: 40px 0px;
+    width: 100%;
+}
+
+div.game-canvas div.instructions {
+    width: 70%;
+    float: left;
+}
+
+div.game-canvas iframe {
+    width: 100%;
+    height: 60%;
+    overflow-x: hidden;
+    margin: 40px 0px;
+}
+
+div.game-canvas h2 {
+    font: 25px NotoSans-ExtraBold;
+    color: var(--dark-2);
+}
+
+div.game-canvas p {
+    font: 14px NotoSans-Regular;
+    color: var(--dark-3);
+}
+
+div.interaction {
+    width: 30%;
+    float: right;
+    text-align: right;
+
+}
+
+div.interaction div.rating img {
+    width: 120px;
+    padding: 0;
+    margin-top: -6px;
+    position: relative;
+}
+
+
+
+div.interaction div.rating h2 {
+    padding: 0;
+    margin: 0;
+    font: 32px NotoSans-ExtraBold;
+    color: var(--dark-2);
+}
+
+div.download {
+    padding: 10px 30px;
+    background-image: linear-gradient(to bottom right, var(--accent-purple), var(--accent-pink));
+    float: right;
+    border-radius: 3%;
+    margin-top: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--light-3);
+    font: 15px NotoSans-Bold;
+    top: -35px; 
+    position: relative;
+}
+
+div.rate {
+    padding: 10px 30px;
+    background-color: var(--light-3);
+    float: right;
+    border-radius: 3%;
+    margin-top: 20px;
+    text-decoration: none;
+    color: var(--dark-2);
+    font: 15px NotoSans-Bold;
+    top: -35px; 
+    position: relative;
+}
+
+div.interaction div.buttons {
+    float: right;
+}
+
+div.interaction div.rating {
+    float: right;
+}
